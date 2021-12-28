@@ -23,9 +23,10 @@ const getToken = () => {
 
   const url = "https://www.bungie.net/Platform/App/OAuth/token/";
 
-  const param = new URLSearchParams().toString();
+  const param = new URLSearchParams();
   param.append('client_id',`${CLIENT_ID}`);
   param.append('grant_type',`authorization_code&code=${authCode}`)
+  param = param.toString();
 
   const config = {
     headers: {
