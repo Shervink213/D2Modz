@@ -1,4 +1,4 @@
-import React ,{ useEffect } from "react";
+import React from "react";
 //import fetch from 'isomorphic-fetch';
 
 
@@ -8,7 +8,7 @@ const apiKey = process.env.REACT_APP_API_KEY;
 const CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
 const CLIENT_SECRET = process.env.REACT_APP_CLIENT_SECRET;
 const authURL = `https://www.bungie.net/en/OAuth/Authorize?client_id=${CLIENT_ID}&response_type=code`
-const authCode = undefined;
+let authCode = undefined;
 
 
 const getCode = () => {
@@ -23,6 +23,7 @@ if (window.location.href.includes('code=')){
   console.log(authCode);
 }
 
+/*
 const getToken = () => {
   fetch("https://www.bungie.net/Platform/App/OAuth/token/", {
     method: 'POST',
@@ -40,6 +41,7 @@ const getToken = () => {
     return Response.json();
   })
 }
+*/
 
 
 
@@ -50,7 +52,7 @@ const App = () => {
   return (
     <div>
       <h1>Placeholder</h1>
-      <button id="myAnchor">
+      <button id="myAnchor" onClick={getCode}>
         get token
       </button>
     </div>
