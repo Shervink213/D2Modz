@@ -26,7 +26,7 @@ const getToken = () => {
   const param = new URLSearchParams();
   param.append('client_id',`${CLIENT_ID}`);
   param.append('grant_type',`authorization_code&code=${authCode}`)
-  param = param.toString();
+
 
   const config = {
     headers: {
