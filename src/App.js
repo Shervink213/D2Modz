@@ -31,10 +31,11 @@ const getToken = () => {
   const config = {
     headers: {
       'Content-Type': 'application/x-www-form-urlencoded',
+      'Authorization': `Basic ${window.btoa(`${CLIENT_ID}:${CLIENT_SECRET}`)}`
     }
   }
 
-  axios.post(url, param, config)
+  axios.post(url, param.toString(), config)
     .then((response) => {
       console.log(response);
       return response.json();
