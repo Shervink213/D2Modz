@@ -5,7 +5,7 @@ import React from "react";
 
 
 //const apiKey = process.env.REACT_APP_API_KEY;
-const CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
+const CLIENT_ID = REACT_APP_CLIENT_ID;
 //const CLIENT_SECRET = process.env.REACT_APP_CLIENT_SECRET;
 const authURL = `https://www.bungie.net/en/OAuth/Authorize?client_id=${CLIENT_ID}&response_type=code`
 let authCode = undefined;
