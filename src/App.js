@@ -17,7 +17,7 @@ const getCode = () => {
 }
 
 if (window.location.href.includes('code=')){
-  var queryString = window.location.href.search;
+  var queryString = window.location.search;
   let params = new URLSearchParams(queryString);
   authCode = parseInt(params.get('code'));
   console.log(authCode);
